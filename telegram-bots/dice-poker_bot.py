@@ -139,13 +139,7 @@ class Player(telepot.helper.ChatHandler):
     # determine tie
     def _simpleTie(self, hand):
     	for die in hand:  
-    		if hand.count(die) == 2:
-    			return die
-    		elif hand.count(die) == 3:
-    			return die
-    		elif hand.count(die) == 4:
-    			return die
-    		elif hand.count(die) == 5:
+    		if hand.count(die) > 1:
     			return die
 
     # determine tie TWOPAIR or FULLHOUSE
