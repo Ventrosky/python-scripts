@@ -13,6 +13,7 @@ min_tokens = 1000
 prefixes = ["en","simple"]
 file_name = "wikiC"
 info = False
+content = False
 
 def usage():
     print '-'*80
@@ -24,6 +25,7 @@ def usage():
     print "-e --en                  - generate only 1 corpus from wiki 'en'" 
     print "-t --tokens=min          - minimum number of tokens for each corpus, default 1000"
     print "-i --info                - generate informations file"
+    print "-c --content             - use contents instead of summaries"
     print
     print
     print "Examples: "
@@ -47,6 +49,120 @@ def getSummary(title):
     p = getSummary(random.choice(e.options))
   except wikipedia.exceptions.PageError as e:
     return None  
+  return p
+
+def getContent(title):
+  p = ""
+  try:
+    p = wikipedia.page(title).content
+  except wikipedia.exceptions.DisambiguationError as e:
+    p = getContent(random.choice(e.options))
+  except wikipedia.exceptions.PageError as e:
+    return None  
+  return p
+
+def findWikiText(t, content):
+  new_title = getTitle()
+  while new_title in t:
+    new_title = getTitle()
+  if content:
+      return (new_title, getContent(new_title))
+  return (new_title, getSummary(new_title))
+
+def lenFrasi(summary):
+  sent_tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
+  frasi = sent_tokenizer.tokenize(summary)
+  lunghezza = 0
+  tokensTot = []
+  for frase in frasi:
+    tokens = nltk.word_tokenize(frase)
+    tokensTot = tokensTot + tokens
+  lunghezza = len(tokensTot)
+  return (lunghezza, tokensTot)
+
+def minCorpus(min, n, titles, corpus, content):
+  while n < min:
+    t,s = findWikiText(titles,content)
+    if not s is None:
+        titles.append(t)
+        corpus = corpus + "\n\n" + s
+        l, t = lenFrasi(s)
+        n = n + l
+  return (corpus, titles, n)
+
+def writeCorpus(name, c):
+  file = codecs.open(name, "w", "utf-8")
+  file.write(c)
+  file.close()
+  print "File name:", name
+
+def createCorpus(fileName, prefix, tokens_min, info, content):
+  i = ""
+  for p in prefix:
+    wikipedia.set_lang(p)
+    corpus, titles, act_tokens = minCorpus(tokens_min,0,[],"", content)
+    i = i + makeDescription(titles, act_tokens, p) + "\n"
+    writeCorpus(fileName+"_"+p+".txt", corpus)
+  if info:
+      writeCorpus("info_corpus.txt", i)
+      
+def makeDescription(titles, act_tokens, prefix):
+  desc = "Corpus created from Wikipidia "+prefix+"\nSummaries from the following pages:\n"
+  for t in titles:
+    desc = desc + " " + t +";"
+  desc = desc + "\n Number of tokens: " + str(act_tokens) + "\n\n"
+  return desc
+
+def main():
+    global min_tokens
+    global prefixes
+    global file_name
+    global info
+    global content
+    
+    if not len(sys.argv[1:]):
+        usage()
+    
+    try:
+        opts, args = getopt.getopt(sys.argv[1:], 'n:et:ich', ['name=', 'en', 'tokens=', 'info', 'content', 'help'])
+    except getopt.GetoptError:
+        usage()
+        sys.exit(2)
+
+    for opt, arg in opts:
+        if opt in ('-h', '--help'):
+            usage()
+            sys.exit(2)
+        elif opt in ('-n', '--name'):
+            file_name = arg
+        elif opt in ('-e', '--en'):
+            prefixes = ['en']
+        elif opt in ('-t', '--tokens'):
+            min_tokens = int(arg)
+        elif opt in ('-i', '--info'):
+            info = True
+        elif opt in ('-c', '--content'):
+            content = True
+        else:
+            usage()
+            sys.exit(2)
+            
+    print '-'*80
+    print "Wikipedia Corpus Generator"
+    print '-'*80
+    warnings.filterwarnings('error')
+    try:
+        createCorpus(file_name,prefixes, min_tokens, info, content)
+    except UserWarning:
+        print 'Suppressed warnings'
+        createCorpus(file_name,prefixes, min_tokens, info, content)
+    print '-'*80
+    print "Process Completed"
+    print '-'*80
+    sys.exit(2)
+    
+main()
+
   return p
 
 def findSummary(t):
