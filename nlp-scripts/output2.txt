@@ -1,0 +1,243 @@
+--------------------------------------------------------------------------------
+ Progetto di Linguistica  Computazionale
+ Programma 2 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 10 PoS (Part-of-Speech) più frequenti
+--------------------------------------------------------------------------------
+ Testo: clinton.txt              | Testo: trump.txt
+--------------------------------------------------------------------------------
+ NN                  679         | NN                  820         
+ IN                  609         | NNP                 749         
+ DT                  441         | IN                  542         
+ PRP                 429         | DT                  515         
+ NNP                 348         | VB                  376         
+ VB                  332         | JJ                  343         
+ NNS                 331         | NNS                 315         
+ JJ                  313         | .                   291         
+ ,                   313         | CC                  255         
+ .                   305         | ,                   232         
+--------------------------------------------------------------------------------
+ 20 Token più  frequenti
+--------------------------------------------------------------------------------
+ Testo: clinton.txt              | Testo: trump.txt
+--------------------------------------------------------------------------------
+ to                       224    | the                      262    
+ the                      186    | and                      223    
+ and                      170    | to                       181    
+ I                        113    | of                       146    
+ of                       110    | will                     116    
+ a                        91     | a                        89     
+ in                       89     | our                      86     
+ you                      83     | We                       70     
+ that                     82     | we                       57     
+ we                       66     | for                      56     
+ for                      64     | are                      52     
+ is                       62     | is                       52     
+ our                      55     | in                       51     
+ And                      53     | Hillary                  46     
+ are                      46     | that                     44     
+ have                     41     | also                     41     
+ who                      39     | –                      37     
+ on                       38     | going                    35     
+ with                     38     | American                 34     
+ at                       38     | plan                     29     
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 20 Bigrammi più frequenti
+--------------------------------------------------------------------------------
+ Testo: clinton.txt              | Testo: trump.txt
+--------------------------------------------------------------------------------
+ going to                 25     | We will                  38     
+ Donald Trump             20     | going to                 34     
+ want to                  18     | are going                29     
+ to be                    15     | we will                  28     
+ of our                   13     | of our                   25     
+ I am                     12     | We are                   24     
+ I want                   12     | will also                23     
+ to do                    11     | United States            19     
+ up to                    11     | Trump Administration     18     
+ I have                   10     | Administration will      18     
+ of you                   9      | plan to                  17     
+ I will                   9      | Hillary Clinton          16     
+ to get                   9      | rebuild our              15     
+ to vote                  8      | our country              13     
+ to make                  8      | our government           12     
+ people who               8      | Real change              12     
+ our country              8      | lied to                  11     
+ I was                    8      | to bring                 11     
+ to say                   7      | begins with              11     
+ we are                   7      | bring back               11     
+--------------------------------------------------------------------------------
+ 20 Trigrammi più frequenti
+--------------------------------------------------------------------------------
+ Testo: clinton.txt                    | Testo: trump.txt
+--------------------------------------------------------------------------------
+ I want to                          7  | are going to                       29 
+ are going to                       5  | We will also                       18 
+ stand up to                        5  | Trump Administration will          18 
+ I want you                         5  | We are going                       18 
+ want you to                        5  | to bring back                      10 
+ is at stake                        5  | take care of                       9  
+ which is why                       4  | care of our                        9  
+ also want to                       4  | biggest tax cut                    8  
+ I also want                        4  | going to have                      8  
+ I would not                        4  | My Contract With                   8  
+ we want to                         4  | cut since Ronald                   8  
+ we going to                        4  | plan to bring                      8  
+ thrilled to be                     4  | Supreme Court who                  8  
+ We’re going to                   4  | Real change also                   8  
+ for our country                    3  | Court who will                     8  
+ is going to                        3  | unnecessary job-killing regulation 8  
+ not going to                       3  | of law enforcement                 8  
+ keep guns out                      3  | rebuild our military               8  
+ Are we going                       3  | appoint Justices to                8  
+ Donald Trump is                    3  | of our Vets                        8  
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 20 Bigrammi - Aggettivo e Sostantivo
+--------------------------------------------------------------------------------
+ Con probabilità congiunta massima P(u,v):
+ Testo: clinton.txt              |    Testo: trump.txt
+--------------------------------------------------------------------------------
+ gun violence             0.00064|    Hillary Clinton          0.00255
+ black women              0.00064|    Real change              0.00191
+ national security        0.00048|    American Voter           0.00143
+ American people          0.00032|    unnecessary job-killing  0.00127
+ American dream           0.00032|    biggest tax              0.00127
+ early voting             0.00032|    illegal Obama            0.00111
+ launch officers          0.00032|    Radical Islamic          0.00111
+ single –               0.00032|    American business        0.00095
+ ” ]                    0.00032|    natural gas              0.00079
+ real choice              0.00032|    illegal server           0.00079
+ many people              0.00032|    Congressional Subpoena   0.00079
+ great honor              0.00032|    clean coal               0.00079
+ nuclear weapons          0.00032|    special interests        0.00079
+ own words                0.00032|    illegal immigration      0.00063
+ fair chance              0.00032|    common core              0.00063
+ divisive vision          0.00032|    criminal conduct         0.00063
+ American women           0.00032|    massive double-digit     0.00063
+ [ AUDIENCE               0.00032|    better deal              0.00063
+ nuclear codes            0.00032|    Syrian Refugee           0.00063
+ other group              0.00032|    criminal investigation   0.00063
+--------------------------------------------------------------------------------
+ Con probabilità condizionata massima P(v|u):
+ Testo: clinton.txt              |    Testo: trump.txt
+--------------------------------------------------------------------------------
+ thin skin                1.0000 |    unnecessary job-killing  1.0000 
+ dear friends             1.0000 |    harmful Obama            1.0000 
+ rural communities        1.0000 |    “open borders          1.0000 
+ faithful people          1.0000 |    urban renewal            1.0000 
+ tougher road             1.0000 |    bitter politics          1.0000 
+ afford textbooks         1.0000 |    in.The FBI               1.0000 
+ narrow view              1.0000 |    global warming           1.0000 
+ Urban reinvestment       1.0000 |    natural gas              1.0000 
+ academic destiny         1.0000 |    higher prices            1.0000 
+ difficult life           1.0000 |    terror-prone regions     1.0000 
+ former Air               1.0000 |    middle class             1.0000 
+ magnificent river        1.0000 |    best care                1.0000 
+ online loophole          1.0000 |    Radical Islamic          1.0000 
+ longtime friends         1.0000 |    beautiful words          1.0000 
+ outrageous lie           1.0000 |    refugee admissions       1.0000 
+ positive difference      1.0000 |    pay-for-play activities  1.0000 
+ slightest provocation    1.0000 |    important words          1.0000 
+ warm welcome             1.0000 |    Sanctuary Cities         1.0000 
+ public service           1.0000 |    affordable health        1.0000 
+ student debt             1.0000 |    solemn duty              1.0000 
+--------------------------------------------------------------------------------
+ Con forza associativa massima (LMI):
+ Testo: clinton.txt              |    Testo: trump.txt
+--------------------------------------------------------------------------------
+ gun violence             33.836 |    Hillary Clinton          109.462
+ national security        33.010 |    Real change              106.949
+ black women              29.836 |    unnecessary job-killing  73.227 
+ launch officers          22.007 |    biggest tax              71.299 
+ own words                21.176 |    Radical Islamic          68.638 
+ [ AUDIENCE               21.176 |    American Voter           67.728 
+ ” ]                    19.176 |    illegal Obama            52.181 
+ nuclear weapons          19.176 |    natural gas              51.454 
+ divisive vision          19.176 |    Congressional Subpoena   51.454 
+ nuclear codes            19.176 |    clean coal               48.824 
+ other group              18.837 |    special interests        47.712 
+ early voting             18.837 |    American business        45.152 
+ great honor              18.533 |    Syrian Refugee           40.111 
+ fair chance              18.392 |    massive double-digit     37.934 
+ American dream           18.258 |    common core              37.771 
+ real choice              18.007 |    illegal server           35.605 
+ single –               14.533 |    better deal              33.384 
+ tougher road             12.588 |    illegal immigration      31.876 
+ afford textbooks         12.588 |    highest levels           30.083 
+ narrow view              12.588 |    email evidence           29.627 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ Le due frasi con probabilità più alta
+--------------------------------------------------------------------------------
+ 1° Frase calcolata attraverso un modello di Markov di ordine 0:
+--------------------------------------------------------------------------------
+ Testo: clinton.txt
+ " And I will stand up to them as president . "
+ Probabilità: 1.42941696146e-22
+
+ Testo: trump.txt
+ " Hillary is the one who lied to the FBI . "
+ Probabilità: 5.56555101691e-21
+--------------------------------------------------------------------------------
+ 2° Frase calcolata attraverso un modello di Markov di ordine 1:
+--------------------------------------------------------------------------------
+ Testo: clinton.txt
+ " Donald Trump won’t stand up to the gun lobby . "
+ Probabilità: 3.02303270383e-07
+
+ Testo: trump.txt
+ " Real change begins with immediately repealing and replacing Obamacare . "
+ Probabilità: 0.000276399465775
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 20 nomi propri di persona più frequenti
+ Testo: clinton.txt                    |    Testo: trump.txt
+--------------------------------------------------------------------------------
+  Donald Trump                      15 |  Hillary                           29 
+  Donald                            7  |  Hillary Clinton                   12 
+  Gabby                             6  |  Obamacare                         10 
+  Trump                             4  |  Ronald Reagan                     8  
+  Mark                              4  |  Radical Islamic                   5  
+  Marian                            3  |  Clinton                           5  
+  Muslims                           2  |  Flint                             2  
+  Obama                             2  |  Currency Manipulation             2  
+  Ohio                              2  |  Dream Big                         2  
+  Joyce                             2  |  Minnesota                         2  
+  Ted Strickland                    2  |  Benghazi                          1  
+  Jackson Lee                       1  |  Phoenix                           1  
+  Bruce Blair                       1  |  Michigan                          1  
+  Remarks                           1  |  Las Vegas                         1  
+  John Cranley                      1  |  Make America Wealthy Again        1  
+  Lincoln                           1  |  Marine Core Air                   1  
+  Abraham                           1  |  Obama                             1  
+  Donna Brazile                     1  |  Marine Core                       1  
+  Gwen Hess                         1  |  Clinton Foundation                1  
+  Shirley Chisholm                  1  |  Bill                              1  
+--------------------------------------------------------------------------------
+ 20 nomi propri di luogo più frequenti
+ Testo: clinton.txt                    |    Testo: trump.txt
+--------------------------------------------------------------------------------
+  America                           16 |  American                          22 
+  American                          11 |  United States                     19 
+  Americans                         5  |  Real                              9  
+  Ohio                              4  |  North Carolina                    5  
+  United States                     4  |  Washington                        5  
+  African                           2  |  America                           4  
+  Cincinnati                        2  |  China                             4  
+  New Bedford                       2  |  Middle                            4  
+  Make                              2  |  Michigan                          3  
+  Urban                             1  |  Pennsylvania                      3  
+  Life                              1  |  Obamacare                         3  
+  North Carolina                    1  |  Iran                              2  
+  Enjoy                             1  |  Arizona                           2  
+  Massachusetts                     1  |  Hillary                           2  
+  Flint                             1  |  Syrian                            2  
+  Imagine                           1  |  Full                              1  
+  South Korea                       1  |  Las Vegas                         1  
+  Orlando                           1  |  Detroit                           1  
+  Marian                            1  |  Florida                           1  
+  Equal                             1  |  Mexico                            1  
+--------------------------------------------------------------------------------
