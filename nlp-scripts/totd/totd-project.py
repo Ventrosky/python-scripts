@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Progetto The Typing of The Dead - Vocabulary Generator
+# Progetto The Typing of The Dead - Dictionary Generator
 #   @BuccaneerDev
 
 import sys, codecs, nltk, re, math
@@ -10,7 +10,7 @@ from decimal import Decimal, ROUND_DOWN
 
 def usage():
     print '-'*80
-    print "The Typing of The Dead - Vocabulary Generator"
+    print "The Typing of The Dead - Dictionary Generator"
     print
     print "Usage: totd-project.py text_file1"
     print 
@@ -237,7 +237,7 @@ def main():
     # nomi dei file passati come argomenti
     file1 = sys.argv[1]
     print '-'*80
-    print " The Typing of The Dead - Vocabulary Generator"
+    print " The Typing of The Dead - Dictionary Generator"
     print '-'*80
     totd = set()
     tokensText1, frasiMarkov1, frasi1 = openTextFile(file1) # tokens del testo, frasi per es. Markov
