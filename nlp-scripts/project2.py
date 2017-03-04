@@ -211,22 +211,26 @@ def maxProbMarkov0(lenCorpus, distrFreq, frasi):
     return topFrase, probFraseMax
 
 # Calcola Probabilita Frase Markov 1; bigramInfos = { bigramma : (F(u,v), F(u), F(v), P(v|u), P(u,v))}
-def probabilitaMarkov1(frase, bigramInfos): 
-    probabilita = 1.0
+def probabilitaMarkov1(lenCorpus, frase, bigramInfos): 
+    probabilita = 1
     w1 = frase[0]
+    primaParola = True
     for tok in frase[1:]:
         w2 = tok
+        if primaParola:
+            probabilita = ( bigramInfos[(w1,w2)][2] *1.0 / lenCorpus*1.0) #calcolo prob prima parola
+            primaParola = False
         probabilitaBigramma = bigramInfos[(w1,w2)][3] # P(v|u)
         probabilita = probabilita * probabilitaBigramma #P(w1, w2,...,wn)=P(w1)*P(w2|w1)*P(w3|w2)*...*P(wn|wn-1)
         w1 = w2
     return probabilita
 
 # restituisce la frase Markov 1 con probabilità più alta
-def maxProbMarkov1(frasi, bigramInfos):
+def maxProbMarkov1(lenCorpus, frasi, bigramInfos):
     probFraseMax = 0
     topFrase = []
     for frase in frasi:
-        p = probabilitaMarkov1(frase, bigramInfos) # Probabilita Frase Markov 1 
+        p = probabilitaMarkov1(lenCorpus, frase, bigramInfos) # Probabilita Frase Markov 1 
         if p > probFraseMax:
             probFraseMax = p
             topFrase = frase
@@ -364,7 +368,7 @@ def main():
     print '-'*80
     infoBigrammi1 = infoBigrams(bigrams1, set(bigrams1), vocabFreq1) # dizionario con info bigrammi : (F(u,v), F(u), F(v), P(v|u), P(u,v))
     infoBigrammi2 = infoBigrams(bigrams2, set(bigrams2), vocabFreq2)
-    topFrase1, probFraseMax1 = maxProbMarkov1(frasiMarkov1, infoBigrammi1) # frase Markov 1 con probabilità più alta    
+    topFrase1, probFraseMax1 = maxProbMarkov1(len(tokensText2),frasiMarkov1, infoBigrammi1) # frase Markov 1 con probabilità più alta    
     print " 2° Frase calcolata attraverso un modello di Markov di ordine 1:"
     print '-'*80
     print ' Testo:', file1
@@ -372,7 +376,7 @@ def main():
     print " Probabilità:", probFraseMax1
     print
     distrFreq2 = nltk.FreqDist(tokensText2)
-    topFrase2, probFraseMax2 = maxProbMarkov1(frasiMarkov2, infoBigrammi2) # frase Markov 1 con probabilità più alta
+    topFrase2, probFraseMax2 = maxProbMarkov1(len(tokensText2),frasiMarkov2, infoBigrammi2) # frase Markov 1 con probabilità più alta
     print ' Testo:', file2
     print ' "'," ".join(topFrase2).encode('utf-8'),'"'
     print " Probabilità:", probFraseMax2
@@ -401,3 +405,4 @@ def main():
     sys.exit(2)
 
 main() 
+
