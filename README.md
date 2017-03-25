@@ -5,5 +5,5 @@ nlp-scripts folder: Collection of scripts and exercises written during a course 
 - project1.py & project2.py - University projects
 - totd/totd-project.py      - The Typing of The Dead, Dictionary Generator
 
-telegram-bots folder: Collection of Telegram Bots 
+telegram-bots folder: testing Telegram Bots 
 - dice-poker_bot.py         - Dice Poker mini-game to be played vs bot
