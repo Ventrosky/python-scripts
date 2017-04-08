@@ -6,7 +6,7 @@ POMODORO = 25
 S_BREAK = 5
 L_BREAK = 20
 MINS = 60
-SESSION = 4
+P_SESSION = 4
 
 def pomodoro_h():
     print "                ,                 "
@@ -88,8 +88,7 @@ def main():
     pygame.mixer.init()
     pygame.mixer.music.load("bell.wav")
     pomodoro_h()
-    n_pomodori = 4
-    main_loop(n_pomodori, 0, 0)
+    main_loop(P_SESSION, 0, 0)
     
 
 main()
