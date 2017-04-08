@@ -85,9 +85,6 @@ def main_loop(session, t_pom, t_brk):
         print "\n - Bye!"
     
 def main():
-    complete = 0
-    s_break = 0
-    l_break = 0
     pygame.mixer.init()
     pygame.mixer.music.load("bell.wav")
     pomodoro_h()
