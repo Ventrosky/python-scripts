@@ -8,4 +8,4 @@ nlp-scripts folder: Collection of scripts and exercises written during a course 
 miscellaneous folder: Various scripts and exercises written for fun
 - dice-poker_bot.py         - Telegram Bot: Dice Poker mini-game to be played vs bot
 - pomodoro.py               - easy to use Pomodoro Technique Timer
-- memento-mori/             - Futurama inspired DeathClock
+- memento-mori/main.py      - Futurama inspired DeathClock
