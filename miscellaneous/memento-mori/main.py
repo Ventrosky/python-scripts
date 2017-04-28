@@ -26,7 +26,7 @@ class MementoMoriApp(App):
         self.root.ids.time.text =('[b]%02d[/b]:%02d:%02d' %
                                         ((23 - int(left[0])), 59 - int(left[1]), 59 - int(left[2])))
         t1 = time.time()
-        t2 = 2860963156.0
+        t2 = 2860963156.0 # death-date
         t3 = t2-t1
         days = int(t3) / 86400
         self.root.ids.stopwatch.text = "Days: [b]"+ str(days)+"[/b]"
