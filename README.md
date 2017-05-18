@@ -1,7 +1,7 @@
 # README:
 > Collection of various python scripts
 
-## nlp-scripts folder: 
+## nlp-scripts 
 > Collection of scripts and exercises written during a course of Natural Language Processing
 
 - `wiki-gen.py`                  - Generates two corpus using summaries from wikipedia ['en','simple']
@@ -9,7 +9,7 @@
 - `project1.py` & `project2.py`  - University projects
 - `totd/totd-project.py`         - The Typing of The Dead, Dictionary Generator: http://bit.ly/ttotd-steam
 
-## miscellaneous folder: 
+## miscellaneous 
 > Various scripts and exercises written for fun
 
 - `dice-poker_bot.py`            - Telegram Bot: Dice Poker mini-game to be played vs bot
