@@ -13,7 +13,7 @@ def usage():
     print "Usage: pdfExtract.py -i file-name.pdf -e pages-intervals"
     print
     print "Examples: "
-    print "./pdfExtract.py -i file-name.pdf -e (1-16)(20-49)(124-132)(137-154)"
+    print "./pdfExtract.py -i file-name.pdf -e 1,16-20,49-124,132-137,154"
     print '-'*80
     sys.exit(0)
 
