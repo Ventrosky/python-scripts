@@ -15,3 +15,4 @@
 - `dice-poker_bot.py`            - Telegram Bot: Dice Poker mini-game to be played vs bot
 - `pomodoro.py`                  - easy to use Pomodoro Technique Timer
 - `memento-mori/main.py`         - Futurama inspired DeathClock
+- `pdfExtract.py`                - simple script to extract page intervals from pdf file
