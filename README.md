@@ -16,5 +16,5 @@
 - `pomodoro.py`                  - easy to use Pomodoro Technique Timer
 - `memento-mori/main.py`         - Futurama inspired DeathClock
 - `pdfExtract.py`                - simple script to extract page intervals from pdf file
-- `pdfMerge.py`                  - Simple script to merge different pdf files
+- `pdfMerge.py`                  - simple script to merge different pdf files
 - `toSprite.py`                  - creates simple sprite-sheets from a folder of frames
