@@ -3,8 +3,8 @@
 
 ## The Code
 
-This script is inspired by Mike Czumak's Recon Scan(https://www.securitysift.com/offsec-pwb-oscp/) and rewritten from scratch.
-Basic overview of the script functionality:
+This script is inspired by [Mike Czumak's Recon Scan](https://www.securitysift.com/offsec-pwb-oscp/) and rewritten from scratch.
+* Basic overview of the script functionality:
 	* TCP/UDP nmap scans
 	* DNS enumeration
 	* HTTP/S enumeration
