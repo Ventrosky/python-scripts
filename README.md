@@ -1,6 +1,9 @@
 # README:
 > Collection of various python scripts
 
+## network-recon 
+- `recon.py`                     - script to run enumeration scripts on targets based on running services
+
 ## nlp-scripts 
 > Collection of scripts and exercises written during a course of Natural Language Processing
 
