@@ -12,6 +12,11 @@
 - `project1.py` & `project2.py`  - University projects
 - `totd/totd-project.py`         - The Typing of The Dead, Dictionary Generator: http://bit.ly/ttotd-steam
 
+## steganography 
+> Inspired by episodes of Mr. Robot, where Elliot uses a software for hiding information within his audio files
+- `deepwav.py`                   - compress, encrypt and hide files into WAV files; also decrypts and extracts
+
+
 ## miscellaneous 
 > Various scripts and exercises written for fun
 
