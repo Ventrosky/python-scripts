@@ -148,7 +148,8 @@ def main():
         encrypted = encrypt(data, password)
         os.remove(temp_arch)
         print " [*] Hiding... "
-        hide_data(encrypted)
+        #splits WAV file in to chunks and write data to the first frame of each chunk
+        hide_data(encrypted) 
         print " [*] Completed! "
     else:
         rndName = rnd_name_id()+".txt"
