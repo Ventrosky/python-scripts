@@ -2,6 +2,7 @@
 > Collection of various python scripts and personal utilities, written mostly for fun and educational purpose.
 
 ## network-recon 
+> Custom enumerating scripts to be launched against one or many targets adapted from [Mike Czumak](https://www.securitysift.com/offsec-pwb-oscp/)
 - `recon.py`                     - script to run enumeration scripts on targets based on running services
 
 ## nlp-scripts 
