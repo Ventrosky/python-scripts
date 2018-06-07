@@ -20,7 +20,7 @@
 
 ## miscellaneous 
 > Various scripts and exercises written for fun
-
+- `genCodiceFiscale.py`          - italian fiscal code generator, for testing purposes
 - `dice-poker_bot.py`            - Telegram Bot: Dice Poker mini-game to be played vs bot
 - `pomodoro.py`                  - easy to use Pomodoro Technique Timer
 - `memento-mori/main.py`         - Futurama inspired DeathClock
