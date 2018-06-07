@@ -152,7 +152,8 @@ def inputPerson():
 	return newPerson
 
 def main(option):
-	loadCodCat(fnameCC,dictCC)
+	#only italians municipality
+	loadCodCat(fnameCC,dictCC) 
 	cfPerson = person
 	if (option):
 		cfPerson = inputPerson()
