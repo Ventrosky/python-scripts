@@ -6,7 +6,7 @@ from re import findall
 
 fnameCC="codicicatastali2.txt"
 
-consonanti=r'[^aeiou]'
+consonanti=r'[^aeiou\s]'
 vocali=r'[aeiou]'
 
 person = {
@@ -108,6 +108,7 @@ def treCons(str,isName):
 	i = 0
 	while len(consos) < 3:
 		consos.append(vocals[i] if (i < len(vocals)) else 'x')
+		i+=1
 	if (len(consos)==3):
 		return ''.join(consos)
 	if(not isName):
@@ -152,8 +153,7 @@ def inputPerson():
 	return newPerson
 
 def main(option):
-	#only italians municipality
-	loadCodCat(fnameCC,dictCC) 
+	loadCodCat(fnameCC,dictCC)
 	cfPerson = person
 	if (option):
 		cfPerson = inputPerson()
