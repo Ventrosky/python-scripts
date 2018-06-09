@@ -155,7 +155,7 @@ def inputPerson():
 def main(option):
 	loadCodCat(fnameCC,dictCC)
 	cfPerson = person
-	if (option):
+	if not option:
 		cfPerson = inputPerson()
 	buildCF(cfPerson)
 
