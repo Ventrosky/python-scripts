@@ -27,4 +27,4 @@
 - `pdfExtract.py`                - simple script to extract page intervals from pdf file
 - `pdfMerge.py`                  - simple script to merge different pdf files
 - `toSprite.py`                  - creates simple sprite-sheets from a folder of frames
-- `keywordmonitor.py`            - [Justin Seitz](http://www.automatingosint.com/blog/2017/04/building-a-keyword-monitoring-pipeline-with-python-pastebin-and-searx/)'s keywordmonitor
+- `keywordmonitor.py`            - [Justin Seitz](http://www.automatingosint.com/blog/2017/04/building-a-keyword-monitoring-pipeline-with-python-pastebin-and-searx/)'s Keyword Monitoring Pipeline
