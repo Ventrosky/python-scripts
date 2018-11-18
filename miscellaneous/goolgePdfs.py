@@ -53,7 +53,7 @@ def startGoogling():
 		searchArgs = "fascicolo+informativo+-auto"
 	searchIndex = 0
 	while searchIndex < MAX_PAGES:
-		htmlCode = inputUrl(searchArgs, searchIndex)
+		htmlCode = inputUrl(searchArgs, searchIndex * 10)
 		crawlPage(htmlCode)
 		searchIndex = searchIndex + 1
 		
