@@ -28,4 +28,4 @@
 - `pdfMerge.py`                  - simple script to merge different pdf files
 - `toSprite.py`                  - creates simple sprite-sheets from a folder of frames
 - `keywordmonitor.py`            - [Justin Seitz](http://www.automatingosint.com/blog/2017/04/building-a-keyword-monitoring-pipeline-with-python-pastebin-and-searx/)'s Keyword Monitoring Pipeline
-- `googlePdfs.py`                - bulk automated search and download of pdfs from google.com
+- `googlePdfs.py`                - automated bulk search and download of pdfs from google.com
