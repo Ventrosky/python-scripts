@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*-
 
 import urllib, sys, os, re
+from multiprocessing.dummy import Pool as ThreadPool
 
 BASE_URL = "https://www.google.com/"
 FILE_TYPE = "filetype:pdf"
 MAX_PAGES = 15
+searchArgs = ""
 
 urls = []
 
@@ -33,10 +35,9 @@ def inputUrl(searchArgs, searchIndex):
             return htmlCode
         print("\nCouldn't connect to web\n")
         
-def crawlPage(htmlCode):
+def crawlPage(htmlCode,searchIndex):
 	urls = re.findall(r'href=[\'"]?([^\'" >]+)', htmlCode)
-	print urls
-        myFile = open("output.txt", "a")
+        myFile = open("output_"+str(searchIndex)+".txt", "a")
 	for url in urls:
 		mySplit = os.path.splitext(os.path.basename(url))
 		if (mySplit[1] == ".pdf"):
@@ -45,17 +46,27 @@ def crawlPage(htmlCode):
 			urllib.urlretrieve(url,name)
 	myFile.close()
 
+def worker(searchIndex):
+	print "[*] Starting:", str(searchIndex) 
+	try:
+		htmlCode = inputUrl(searchArgs, searchIndex)
+		crawlPage(htmlCode, searchIndex)
+	except IOError as ex:
+		print "[!]",str(ex),  str(searchIndex)
+
+
 def startGoogling():
-	searchArgs = ""
+	global searchArgs
+	
 	if len(sys.argv[1:]):
 		searchArgs = '+'.join(sys.argv[1:])
 	else:
 		searchArgs = "fascicolo+informativo+-auto"
 	searchIndex = 0
-	while searchIndex < MAX_PAGES:
-		htmlCode = inputUrl(searchArgs, searchIndex * 10)
-		crawlPage(htmlCode)
-		searchIndex = searchIndex + 1
+	pool = ThreadPool(MAX_PAGES)
+	pool.map(worker,range(0,MAX_PAGES * 10, 10))
+	pool.close()
+	pool.join()
+	print "[*] Pool completed"
 		
-
 startGoogling();
