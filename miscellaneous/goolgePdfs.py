@@ -63,7 +63,7 @@ def startGoogling():
 	else:
 		searchArgs = "fascicolo+informativo+-auto"
 	searchIndex = 0
-	pool = ThreadPool(MAX_PAGES)
+	pool = ThreadPool(MAX_PAGES + 1)
 	pool.map(worker,range(0, (MAX_PAGES * 10) + 1, 10))
 	pool.close()
 	pool.join()
