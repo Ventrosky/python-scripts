@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>      
+    <title>Flask Chat</title>
+</head>
+<body>
+    <style>
+        input{
+            width: 100%;
+            height: 35px;
+        }
+        b{
+            color: #000;
+        }
+        #msg{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #msg b{
+            padding: 5px 10px;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form id="message-form" action="" method="POST">
+                    <div class="col-sm-3">
+                        <input id="user-name" class="username" type="text" placeholder="Enter message" />
+                    </div>
+                    <div class="col-sm-7">
+                        <input id="user-message" class="message" type="text" placeholder="Enter message" />
+                    </div>
+                    <div class="col-sm-2">
+                        <input class="btn btn-primary" type="submit" value="Send" />
+                    </div>
+                </form>
+                
+            </div>
+            
+        </div>
+                <div class="message_holder col-sm-12"></div>
+                <h3>No message yet..</h3>
+
+</div>
+  <script type="text/javascript" >
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    socket.on( 'connect', function() {
+      socket.emit( 'my event', {
+        data: 'User Connected'
+      } )
+      var form = $( 'form' ).on( 'submit', function( e ) {
+        e.preventDefault()
+        let user_name = $( 'input.username' ).val()
+        let user_input = $( 'input.message' ).val()
+        socket.emit( 'send message', {
+          user_name : user_name,
+          message : user_input
+        } )
+        $( 'input.message' ).val( '' ).focus()
+      } )
+    } )
+
+    socket.on( 'message text', function( msg ) {
+      console.log( msg )
+      if( typeof msg.user_name !== 'undefined' ) {
+        $( 'h3' ).remove()
+        $( 'div.message_holder' ).append( '<div class="row" id="msg" ><div class="col-sm-4"><b>'+msg.user_name+'</b></div><div class="col-sm-8"> '+msg.message+'</div></div>' )
+      }
+    })
+  </script>
+
+</body>
+</html>
