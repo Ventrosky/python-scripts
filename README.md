@@ -12,6 +12,7 @@
 - `tw-tool.py`                   - Exercise script, statistical indexes, mutual information, bigrams, trigrams
 - `project1.py` & `project2.py`  - University projects
 - `totd/totd-project.py`         - The Typing of The Dead, Dictionary Generator: http://bit.ly/ttotd-steam
+- `levenshtein.py`               - Playing around with Levenshtein distance
 
 ## steganography 
 > Inspired by episodes of Mr. Robot, where Elliot uses a software for hiding information within his audio files
