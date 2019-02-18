@@ -13,7 +13,7 @@
 - `project1.py` & `project2.py`  - University projects
 - `totd/totd-project.py`         - The Typing of The Dead, Dictionary Generator: http://bit.ly/ttotd-steam
 - `levenshtein.py`               - Playing around with Levenshtein distance
-- `demo-chatbot`                 - Building a chatbot and a virtual assistant through the Datacamp Course
+- `demo-chatbot`                 - [Datacamp Course](https://campus.datacamp.com/courses/building-chatbots-in-python/) chatbot and virtual assistant
 
 ## steganography 
 > Inspired by episodes of Mr. Robot, where Elliot uses a software for hiding information within his audio files
