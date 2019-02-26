@@ -6,7 +6,7 @@
 - `recon.py`                     - script to run enumeration scripts on targets based on running services
 
 ## nlp-scripts 
-> Collection of scripts and exercises written during a course of *Natural Language Processing* using **NLTK**
+> Collection of scripts and exercises written while learning *Natural Language Processing* using **NLTK** and **spaCy**
 
 - `wiki-gen.py`                  - Generates two corpus using summaries from wikipedia ['en','simple']
 - `tw-tool.py`                   - Exercise script, statistical indexes, mutual information, bigrams, trigrams
