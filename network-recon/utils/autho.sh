@@ -1,0 +1,1 @@
+curl [url_address] -H 'Accept: application/json'
