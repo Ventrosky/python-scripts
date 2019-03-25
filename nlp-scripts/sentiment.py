@@ -1,12 +1,9 @@
 from rasa_nlu.components import Component
 from rasa_nlu import utils
 from rasa_nlu.model import Metadata
-
-#import nltk
+#import nltk, os
 #from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-import os
-
 from textblob import TextBlob
 
 #pipeline:      
@@ -38,8 +35,9 @@ class SentimentAnalyzer(Component):
     def process(self, message, **kwargs):
         """Retrieve the text message, translate to italian, pass it to the classifier
             and append the prediction results to the message class."""
-        ita_message = TextBlob(message.text).translate(from_lang="it", to='en')
-        #ita_message = TextBlob("Textblob is amazingly simple to use. What great fun!")
+		ita_message = message.text
+        if(ita_message.detect_language()=="it"):
+            ita_message = TextBlob(message.text).translate(from_lang="it", to='en')
         #ita_message.sentiment
         #ita_message.sentiment.polarity
         sid = SentimentIntensityAnalyzer()
@@ -49,9 +47,6 @@ class SentimentAnalyzer(Component):
         entity = self.convert_to_rasa(key, value)
 
         message.set("entities", [entity], add_to_output=True)
-		
-		
 
     def persist(self, model_dir):
         pass
-
