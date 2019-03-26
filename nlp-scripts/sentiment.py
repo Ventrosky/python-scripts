@@ -35,15 +35,18 @@ class SentimentAnalyzer(Component):
         """Retrieve the text message, translate to italian, pass it to the classifier
             and append the prediction results to the message class."""
         ita_message = TextBlob(message.text)
-        if(ita_message.detect_language()=="it"):
-            ita_message = ita_message.translate(from_lang="it", to='en')
+        try:
+            if(ita_message.detect_language()=="it"):
+                ita_message = ita_message.translate(from_lang="it", to='en')
+        except:
+            print("TranslatorError", ita_message)
         #ita_message.sentiment
         #ita_message.sentiment.polarity
         sid = SentimentIntensityAnalyzer()
         res = sid.polarity_scores(ita_message)
         key, value = max(res.items(), key=lambda x: x[1])
         entity = self.convert_to_rasa(key, value)
-        message.set("entities", [entity], add_to_output=True)
+        message.set("entities", message.get("entities", []) + [entity], add_to_output=True)
 
     def persist(self, model_dir):
         pass
