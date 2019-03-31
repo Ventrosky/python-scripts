@@ -1,4 +1,18 @@
 #######################################
+#Implementing a state machine
+
+#Example rules:
+INIT = 0 
+CHOOSE_COFFEE = 1 
+ORDERED = 2
+policy_rules = { 
+    (INIT, "order"): (CHOOSE_COFFEE, "ok, Columbian or Kenyan?"),    
+    (CHOOSE_COFFEE, "specify_coffee"): (ORDERED, "perfect, the beans are on their way!"), 
+    }
+
+state = INIT 
+
+#######################################
 # You'll often want your bot to guide users through a series of steps, such as when they're placing an order.
 # In this exercise, you'll begin building a bot that lets users order coffee. 
 # They can choose between two types: Colombian, and Kenyan. 
@@ -13,6 +27,7 @@ def send_message(state, message):
         return new_state
 
 state = send_message(state, message)
+
 #######################################
 # Define the INIT state
 INIT = 0
@@ -43,7 +58,7 @@ messages = [
 state = INIT
 for message in messages:    
     state = send_message(policy, state, message)
-    
+
 #######################################
 # Define the states
 INIT=0 
