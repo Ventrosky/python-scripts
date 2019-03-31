@@ -14,6 +14,7 @@
 - `totd/totd-project.py`         - The Typing of The Dead, Dictionary Generator: http://bit.ly/ttotd-steam
 - `levenshtein.py`               - Playing around with Levenshtein distance
 - `demo-chatbot`                 - [Datacamp Course](https://campus.datacamp.com/courses/building-chatbots-in-python/) chatbot and virtual assistant
+- `sentiment.py`                 - custom Sentiment Analysis Component class for Rasa NLU
 
 ## steganography 
 > Inspired by episodes of Mr. Robot, where Elliot uses a software for hiding information within his audio files
@@ -31,7 +32,6 @@
 - `toSprite.py`                  - creates simple sprite-sheets from a folder of frames
 - `keywordmonitor.py`            - [Justin Seitz](http://www.automatingosint.com/blog/2017/04/building-a-keyword-monitoring-pipeline-with-python-pastebin-and-searx/)'s Keyword Monitoring Pipeline
 - `googlePdfs.py`                - automated bulk search and download of pdfs from google.com
-- `sentiment.py`                 - custom Sentiment Analysis Component class for Rasa NLU
 
 ## flask 
 > Small app written for fun and testing purposes
