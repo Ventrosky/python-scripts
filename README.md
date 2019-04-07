@@ -15,6 +15,7 @@
 - `levenshtein.py`               - Playing around with Levenshtein distance
 - `demo-chatbot`                 - [Datacamp Course](https://campus.datacamp.com/courses/building-chatbots-in-python/) chatbot and virtual assistant
 - `sentiment.py`                 - custom Sentiment Analysis Component class for Rasa NLU
+- `fuzzy-match.py`               - custom fuzzy string matching combining nltk's tokenizers, stemmers, and edit distance. 
 
 ## steganography 
 > Inspired by episodes of Mr. Robot, where Elliot uses a software for hiding information within his audio files
