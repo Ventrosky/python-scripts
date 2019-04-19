@@ -34,6 +34,7 @@
 - `keywordmonitor.py`            - [Justin Seitz](http://www.automatingosint.com/blog/2017/04/building-a-keyword-monitoring-pipeline-with-python-pastebin-and-searx/)'s Keyword Monitoring Pipeline
 - `googlePdfs.py`                - automated bulk search and download of pdfs from google.com
 - `interaction_test.py`          - testing chatbot application Socket.io interaction
+- `generate_stories.py`          - generator of training examples for Rasa Core
 
 ## flask 
 > Small app written for fun and testing purposes
