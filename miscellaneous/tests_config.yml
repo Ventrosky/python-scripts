@@ -1,0 +1,13 @@
+TEST01:
+    client:
+        - 'message from client'
+    server:
+        - 'regex answer server'
+        
+TEST02:
+    client:
+        - voglio visualizzare il contatto
+        - di ventrosky
+    server:
+        - '^Inserisci il nome'
+        - '^[\w\.\+\-]+\@[\w]+\.[a-z]{2,3}$'
