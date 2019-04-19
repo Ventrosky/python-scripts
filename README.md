@@ -33,6 +33,7 @@
 - `toSprite.py`                  - creates simple sprite-sheets from a folder of frames
 - `keywordmonitor.py`            - [Justin Seitz](http://www.automatingosint.com/blog/2017/04/building-a-keyword-monitoring-pipeline-with-python-pastebin-and-searx/)'s Keyword Monitoring Pipeline
 - `googlePdfs.py`                - automated bulk search and download of pdfs from google.com
+- `interaction_test.py`          - testing chatbot application Socket.io interaction
 
 ## flask 
 > Small app written for fun and testing purposes
