@@ -13,7 +13,7 @@
 - `project1.py` & `project2.py`  - University projects
 - `totd/totd-project.py`         - The Typing of The Dead, Dictionary Generator: http://bit.ly/ttotd-steam
 - `levenshtein.py`               - Playing around with Levenshtein distance
-- `demo-chatbot`                 - [Datacamp Course](https://campus.datacamp.com/courses/building-chatbots-in-python/) chatbot and virtual assistant
+- `demo-chatbot`                 - [Datacamp Courses](https://campus.datacamp.com/courses/) *NLP foundamentals* and *Building Chatbots in Python*
 - `sentiment.py`                 - custom Sentiment Analysis Component class for Rasa NLU
 - `fuzzy-match.py`               - custom fuzzy string matching combining nltk's tokenizers, stemmers, and edit distance. 
 
