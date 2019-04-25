@@ -16,6 +16,7 @@
 - `demo-chatbot`                 - [Datacamp Courses](https://campus.datacamp.com/courses/) *NLP foundamentals* and *Building Chatbots in Python*
 - `sentiment.py`                 - custom Sentiment Analysis Component class for Rasa NLU
 - `fuzzy-match.py`               - custom fuzzy string matching combining nltk's tokenizers, stemmers, and edit distance. 
+- `crypto-converter`             - quick and dirty Demo of cryptocurrencies converter bot with Rasa NLU 
 
 ## steganography 
 > Inspired by episodes of Mr. Robot, where Elliot uses a software for hiding information within his audio files
