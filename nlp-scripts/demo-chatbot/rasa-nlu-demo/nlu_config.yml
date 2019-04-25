@@ -1,0 +1,2 @@
+language: it_core_news_sm
+pipeline: pretrained_embeddings_spacy

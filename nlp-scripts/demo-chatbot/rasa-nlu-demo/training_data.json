@@ -1,0 +1,299 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "ciao",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "ciauz",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "buongiorno",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "buonasera",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "salve",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "grazie!",
+        "intent": "thankyou",
+        "entities": []
+      },
+      {
+        "text": "grazie a te",
+        "intent": "thankyou",
+        "entities": []
+      },
+      {
+        "text": "thx",
+        "intent": "thankyou",
+        "entities": []
+      },
+      {
+        "text": "grazie mille",
+        "intent": "thankyou",
+        "entities": []
+      },
+      {
+        "text": "converti 60 euro in bitcoin",
+        "intent": "convert",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "BTC",
+            "entity": "to"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "value": "EUR",
+            "entity": "from"
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "value": "60",
+            "entity": "amount"
+          }
+        ]
+      },
+      {
+        "text": "converti 1.045 BTC in EUR",
+        "intent": "convert",
+        "entities": [
+          {
+            "start": 22,
+            "end": 25,
+            "value": "EUR",
+            "entity": "to"
+          },
+          {
+            "start": 15,
+            "end": 18,
+            "value": "BTC",
+            "entity": "from"
+          },
+          {
+            "start": 9,
+            "end": 14,
+            "value": "1.045",
+            "entity": "amount"
+          }
+        ]
+      },
+      {
+        "text": "e invece 150 USD in BTC",
+        "intent": "convert",
+        "entities": [
+          {
+            "start": 20,
+            "end": 23,
+            "value": "BTC",
+            "entity": "to"
+          },
+          {
+            "start": 13,
+            "end": 16,
+            "value": "USD",
+            "entity": "from"
+          },
+          {
+            "start": 9,
+            "end": 12,
+            "value": "150",
+            "entity": "amount"
+          }
+        ]
+      },
+      {
+        "text": "quale è il cambio da 60 EUR a BTC",
+        "intent": "convert",
+        "entities": [
+          {
+            "start": 30,
+            "end": 33,
+            "value": "BTC",
+            "entity": "to"
+          },
+          {
+            "start": 24,
+            "end": 27,
+            "value": "EUR",
+            "entity": "from"
+          },
+          {
+            "start": 21,
+            "end": 23,
+            "value": "60",
+            "entity": "amount"
+          }
+        ]
+      },
+      {
+        "text": "vorrei 2 Litecoin in Bitcoin",
+        "intent": "convert",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "LTC",
+            "entity": "from"
+          },
+          {
+            "start": 21,
+            "end": 28,
+            "value": "BTC",
+            "entity": "to"
+          },
+          {
+            "start": 7,
+            "end": 8,
+            "value": "2",
+            "entity": "amount"
+          }
+        ]
+      },
+      {
+        "text": "convertimi 0.45 XBT in Ripple",
+        "intent": "convert",
+        "entities": [
+          {
+            "start": 16,
+            "end": 19,
+            "value": "BTC",
+            "entity": "from"
+          },
+          {
+            "start": 23,
+            "end": 29,
+            "value": "XRP",
+            "entity": "to"
+          },
+          {
+            "start": 11,
+            "end": 15,
+            "value": "0.45",
+            "entity": "amount"
+          }
+        ]
+      },
+      {
+        "text": "in Monero quanti sono 10 Dash",
+        "intent": "convert",
+        "entities": [
+          {
+            "start": 22,
+            "end": 24,
+            "value": "10",
+            "entity": "amount"
+          },
+          {
+            "start": 25,
+            "end": 29,
+            "value": "DASH",
+            "entity": "from"
+          },
+          {
+            "start": 3,
+            "end": 9,
+            "value": "XMR",
+            "entity": "to"
+          }
+        ]
+      },
+      {
+        "text": "converti in Dogecoin 0.002 Bitcoin",
+        "intent": "convert",
+        "entities": [
+          {
+            "start": 11,
+            "end": 20,
+            "value": "XDG",
+            "entity": "to"
+          },
+          {
+            "start": 27,
+            "end": 34,
+            "value": "BTC",
+            "entity": "from"
+          },
+          {
+            "start": 21,
+            "end": 26,
+            "value": "0.002",
+            "entity": "amount"
+          }
+        ]
+      },
+      {
+        "text": "voglio convertire 100 Ethereum in €",
+        "intent": "convert",
+        "entities": [
+          {
+            "start": 34,
+            "end": 35,
+            "value": "EUR",
+            "entity": "to"
+          },
+          {
+            "start": 22,
+            "end": 30,
+            "value": "ETC",
+            "entity": "from"
+          },
+          {
+            "start": 18,
+            "end": 21,
+            "value": "100",
+            "entity": "amount"
+          }
+        ]
+      },
+      {
+        "text": "quanto vale 1000 $ in Ether",
+        "intent": "",
+        "entities": [
+          {
+            "start": 17,
+            "end": 18,
+            "value": "USD",
+            "entity": "from"
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "value": "1000",
+            "entity": "amount"
+          },
+          {
+            "start": 22,
+            "end": 27,
+            "value": "ETH",
+            "entity": "to"
+          }
+        ]
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}
