@@ -17,6 +17,7 @@
 - `sentiment.py`                 - custom Sentiment Analysis Component class for Rasa NLU
 - `fuzzy-match.py`               - custom fuzzy string matching combining nltk's tokenizers, stemmers, and edit distance. 
 - `crypto-converter`             - quick and dirty Demo of cryptocurrencies converter bot with Rasa NLU 
+- `ngram.py`             		 - JSON dump of n-gram models for a typing assistant's predictions with markov chains
 
 ## steganography 
 > Inspired by episodes of Mr. Robot, where Elliot uses a software for hiding information within his audio files
