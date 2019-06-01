@@ -6,17 +6,17 @@
 - `recon.py`                     - script to run enumeration scripts on targets based on running services
 
 ## nlp-scripts 
-> Collection of scripts and exercises written while learning *Natural Language Processing* using **NLTK** and **spaCy**
+> Collection of scripts and exercises written while learning *Natural Language Processing* using **NLTK**, **spaCy** and the **Rasa Stack**
 
 - `wiki-gen.py`                  - Generates two corpus using summaries from wikipedia ['en','simple']
 - `tw-tool.py`                   - Exercise script, statistical indexes, mutual information, bigrams, trigrams
-- `project1.py` & `project2.py`  - University projects
+- `project1.py` & `project2.py`  - University projects with **NLTK**
 - `totd/totd-project.py`         - The Typing of The Dead, Dictionary Generator: http://bit.ly/ttotd-steam
 - `levenshtein.py`               - Playing around with Levenshtein distance
 - `demo-chatbot`                 - [Datacamp Courses](https://campus.datacamp.com/courses/) *NLP foundamentals* and *Building Chatbots in Python*
-- `sentiment.py`                 - custom Sentiment Analysis Component class for Rasa NLU
+- `sentiment.py`                 - custom Sentiment Analysis Component class for **Rasa NLU**
 - `fuzzy-match.py`               - custom fuzzy string matching combining nltk's tokenizers, stemmers, and edit distance. 
-- `crypto-converter`             - quick and dirty Demo of cryptocurrencies converter bot with Rasa NLU 
+- `crypto-converter`             - quick and dirty Demo of cryptocurrencies converter bot with **Rasa NLU**
 - `ngram.py`             		 - JSON dump of n-gram models for a typing assistant's predictions with markov chains
 
 ## steganography 
