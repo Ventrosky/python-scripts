@@ -39,6 +39,8 @@
 - `interaction_test.py`          - testing chatbot application Socket.io interaction
 - `generate_stories.py`          - generator of training examples for Rasa Core
 - `signed-hmacsha.py`            - test client message handler logic for HMAC authentication
+- `icone-android.py`             - generate Android icons with different resolutions
+
 
 ## flask 
 > Small app written for fun and testing purposes
