@@ -40,7 +40,7 @@
 - `generate_stories.py`          - generator of training examples for Rasa Core
 - `signed-hmacsha.py`            - test client message handler logic for HMAC authentication
 - `icone-android.py`             - generate Android icons with different resolutions
-
+- `oblio-xml.py`                 - script to process batches of XML letters
 
 ## flask 
 > Small app written for fun and testing purposes
