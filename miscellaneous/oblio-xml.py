@@ -70,6 +70,7 @@ def main():
         'POLIZZA': randomDigits,
         'DSCOGNOME': randomChars,
         'CDPIVA': randomDigits,
+        'EMAIL': randomChars,
         'DETT_IMLORAPRE': randomDigits,
         'DETT_IMLOPRPRE': randomDigits,
         'DTEFFSOS': lambda: '00/00/0000',
