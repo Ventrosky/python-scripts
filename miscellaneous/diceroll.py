@@ -48,7 +48,7 @@ class DiceRoll():
             value += randint(0, x)
     
     def evaluate(self, string):
-        clean = string.lower().replace(" ", "").replace('x','*')
+        clean = string.lower().replace(" ", "")
         self.to_posfix(clean)
         self.stack = deque()
         for o in self.posfix:
