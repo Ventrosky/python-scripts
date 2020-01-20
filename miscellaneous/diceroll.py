@@ -69,13 +69,17 @@ if len(params) == 0:
     print('Usage:')
     print('./diceroll.py <expr_1> <expr_2> ... <expr_n>')
     print('Example:')
-    print('./diceroll.py 1d6*5 3d6x10+3 3x(2d6+4)')
+    print(' python3 ./diceroll.py 1d6*5 3d6x10+3 "3x(2d6+4)"')
+    print()
     sys.exit()
 
 print('List:', str(params))
 print()
 for dice_expr in params:
     print(dice_expr, ':')
-    print(' =>', dice.evaluate(dice_expr))
+    try:
+        print(' =>', dice.evaluate(dice_expr))
+    except:
+        print(" => Something went wrong")
 
 print()
